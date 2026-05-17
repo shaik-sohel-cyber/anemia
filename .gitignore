@@ -1,0 +1,45 @@
+# Dependency directories
+node_modules/
+frontend/node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+frontend/dist/
+build/
+.vite/
+.next/
+
+# Environment files (CRITICAL: Do not leak API keys or DB passwords!)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+backend/.env
+frontend/.env
+
+# Databases
+*.db
+*.sqlite3
+backend/*.db
+backend/geoproteonet.db
+backend/fetal_anemia.db
+
+# Large Datasets and Uploads
+Fetal Abdominal Structures Segmentation Dataset Using Ultrasonic Images (1)-20260414T100044Z-3-003/
+backend/uploads/
+uploads/
+
+# Python caching
+__pycache__/
+backend/__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
