@@ -6,8 +6,8 @@ import os
 SQLALCHEMY_DATABASE_URL = os.environ.get("DATABASE_URL")
 
 if SQLALCHEMY_DATABASE_URL and SQLALCHEMY_DATABASE_URL.startswith("postgresql"):
-    # Supabase / PostgreSQL configuration
-    engine = create_engine(SQLALCHEMY_DATABASE_URL)
+    # Supabase / PostgreSQL configuration with connection pooling optimization
+    engine = create_engine(SQLALCHEMY_DATABASE_URL, pool_pre_ping=True)
 else:
     # Fallback to local SQLite for development
     SQLALCHEMY_DATABASE_URL = "sqlite:///./fetal_anemia.db"
